@@ -16,8 +16,7 @@ for (var i = 0; i < 5; i++) {
 <script>
 
 LuckyBall = Math.floor(Math.random()*18) + 1;
-document.write("\n Lucky Ball: \
-	meme", LuckyBall, "\n");
+document.write("\n Lucky Ball: ", LuckyBall, "\n");
 </script>
 <br>
 <script>
@@ -27,6 +26,7 @@ document.write("Winning numbers sorted: \n");
 for (var i = 0; i < 5; i++) {
 	document.write(WinningNums[i], ", ");
 }
+
 </script>
 <br>
 <script>
@@ -49,11 +49,54 @@ function ViewWinnings() {
 	var FiveNums = document.getElementById("nums").split();
 	var LuckyVal = document.getElementById("lucky").split();
 	alert(FiveNums[0]);
+	alert("whee");
+	var Luck = false;
+	if (LuckyVal == LuckyBall) {
+		Luck = true;
+	}
 
+	var NumCorrect = 0;
+	for (var i = 0; i < 5; i++) {
+		if (WinningNums.includes(FiveNums[i])) {
+			NumCorrect++;
+		}
+	}
+
+	if (NumCorrect == 5 and Luck) {
+		alert ("Payout: $7000 a WEEK for LIFE!");
+	}
+	else if (NumCorrect == 5) {
+		alert ("Payout: $25,000 a YEAR for LIFE!");
+	}
+	else if (NumCorrect == 4 and Luck) {
+		alert ("Payout: $5000");
+	}
+	else if (NumCorrect == 4) {
+		alert ("Payout: $200");
+	}
+	else if (NumCorrect == 3 and Luck) {
+		alert ("Payout: $150");
+	}
+	else if (NumCorrect == 3) {
+		alert ("Payout: $20");
+	}
+	else if (NumCorrect == 2 and Luck) {
+		alert ("Payout: $25");
+	}
+	else if (NumCorrect == 2) {
+		alert ("Payout: $3");
+	}
+	else if (NumCorrect == 1 and Luck) {
+		alert ("Payout: $6");
+	}
+	else if (Luck) {
+		alert ("Payout: $4");
+	}
+	else {
+		alert ("No Payout")
+	}
 }
 </script>
-
-
 
 
 </body>
