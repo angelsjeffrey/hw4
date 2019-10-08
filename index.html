@@ -40,7 +40,7 @@ document.write("\n Lucky Ball: \n", LuckyBall, "\n");
 	Choose a number for your Lucky Ball from 1 to 18: <br>
 	<input type="text" name="lucky" id="lucky" value="00">
 	<br><br>
-	<button onclick="WinCheck()"> 
+	<button type='button' onclick="WinCheck()"> 
 		Check Payout
 	</button>
 </form>
@@ -53,7 +53,7 @@ function WinCheck(){
 	var LuckyVal = document.getElementById("lucky").split();
 	alert(FiveNums[0]);
 	var Luck = false;
-	if (LuckyVal == LuckyBall) {
+	if (LuckyVal == LuckyBall){
 		Luck = true;
 	}
 
@@ -99,7 +99,5 @@ function WinCheck(){
 	}
 }
 </script>
-
-
 </body>
 </html>
