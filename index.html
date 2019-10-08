@@ -4,9 +4,22 @@
 
 
 <script>
+document.write("Winning numbers:");
+var WinningNums = [];
+for (var i = 0; i < 5; i++) {
+	WinningNums[i] = Math.floor(Math.random()*48) + 1;
+	document.write(WinningNums[i], ", ")
+}
+
+WinningNums[5] = Math.floor(Math.random()*18) + 1;
+document.write("Lucky Ball: \n", WinningNums[5]);
+
+for (var i = 0; i < 5; i++) 
+	
+
 function ViewWinnings() {
-	var FiveNums = document.getElementById("nums").split()
-	var LuckyVal = document.getElementById("lucky").split()
+	var FiveNums = document.getElementById("nums").split();
+	var LuckyVal = document.getElementById("lucky").split();
 	alert(FiveNums[0])
 
 }	
