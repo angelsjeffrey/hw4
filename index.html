@@ -2,7 +2,7 @@
 <html>
 <body>
 
-
+<center>
 <script>
 document.write("Winning numbers: ");
 alert("hello");
@@ -33,7 +33,7 @@ for (var i = 0; i < 5; i++) {
 document.write("\n Lucky Ball: \n", LuckyBall, "\n");
 </script>
 <br>
-
+</center>
 
 <form inputnums>
 <center>
@@ -53,10 +53,10 @@ Choose a number for your Lucky Ball from 1 to 18:
 
 <script>
 function ViewWinnings() {
+	alert("whee");
 	var FiveNums = document.getElementById("nums").split();
 	var LuckyVal = document.getElementById("lucky").split();
 	alert(FiveNums[0]);
-	alert("whee");
 	var Luck = false;
 	if (LuckyVal == LuckyBall) {
 		Luck = true;
