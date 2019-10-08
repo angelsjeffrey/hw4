@@ -43,12 +43,13 @@ Choose a number for your Lucky Ball from 1 to 18:
 <br>
 <input type="text" id="lucky" value="00">
 <br><br>
-<input type="button" onclick="ViewWinnings()" value="See Results"/>
+<button onclick="WinCheck()"> 
+</button>
 </form>
 </center>
 
 <script>
-function ViewWinnings(){
+function WinCheck(){
 	alert("whee");
 	var FiveNums = document.getElementById("nums").split();
 	var LuckyVal = document.getElementById("lucky").split();
