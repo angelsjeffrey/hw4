@@ -1,51 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
-<script>
-document.write("Winning numbers: ");
-var WinningNums = [];
-for (var i = 0; i < 5; i++) {
-	WinningNums[i] = Math.floor(Math.random()*48) + 1;
-	document.write(WinningNums[i], ", ");
-}
-</script>
-<br>
-<script>
-
-LuckyBall = Math.floor(Math.random()*18) + 1;
-document.write("\n Lucky Ball: ", LuckyBall, "\n");
-</script>
-<br>
-<script>
-
-WinningNums.sort(function(a, b){return a-b});
-document.write("Winning numbers sorted: \n");
-for (var i = 0; i < 5; i++) {
-	document.write(WinningNums[i], ", ");
-}
-alert("working1");
-
-</script>
-<br>
-<script>
-document.write("\n Lucky Ball: \n", LuckyBall, "\n");
-alert("working2");
-</script>
-
-
-<form inputnums>
-	Enter 5 numbers between 1 and 48: <br>
-	<input type="text" name="nums" id="nums" value="00 00 00 00 00">
-	<br>
-	Choose a number for your Lucky Ball from 1 to 18: <br>
-	<input type="text" name="lucky" id="lucky" value="00">
-	<br><br>
-</form>
-<button type= 'button' onclick="CheckWinnings()"> 
-	Check Payout!
-</button>
-
+	
 <script>
 function CheckWinnings(){
 	alert("hello");
@@ -99,5 +55,51 @@ function CheckWinnings(){
 	}
 }
 </script>
+
+<script>
+document.write("Winning numbers: ");
+var WinningNums = [];
+for (var i = 0; i < 5; i++) {
+	WinningNums[i] = Math.floor(Math.random()*48) + 1;
+	document.write(WinningNums[i], ", ");
+}
+</script>
+<br>
+<script>
+
+LuckyBall = Math.floor(Math.random()*18) + 1;
+document.write("\n Lucky Ball: ", LuckyBall, "\n");
+</script>
+<br>
+<script>
+
+WinningNums.sort(function(a, b){return a-b});
+document.write("Winning numbers sorted: \n");
+for (var i = 0; i < 5; i++) {
+	document.write(WinningNums[i], ", ");
+}
+alert("working1");
+
+</script>
+<br>
+<script>
+document.write("\n Lucky Ball: \n", LuckyBall, "\n");
+alert("working2");
+</script>
+
+
+<form inputnums>
+	Enter 5 numbers between 1 and 48: <br>
+	<input type="text" name="nums" id="nums" value="00 00 00 00 00">
+	<br>
+	Choose a number for your Lucky Ball from 1 to 18: <br>
+	<input type="text" name="lucky" id="lucky" value="00">
+	<br><br>
+</form>
+<button type= 'button' onclick="CheckWinnings()"> 
+	Check Payout!
+</button>
+
+
 </body>
 </html>
