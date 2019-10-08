@@ -30,6 +30,7 @@ for (var i = 0; i < 5; i++) {
 <br>
 <script>
 document.write("\n Lucky Ball: \n", LuckyBall, "\n");
+alert("hello");
 </script>
 
 
@@ -40,15 +41,15 @@ document.write("\n Lucky Ball: \n", LuckyBall, "\n");
 	Choose a number for your Lucky Ball from 1 to 18: <br>
 	<input type="text" name="lucky" id="lucky" value="00">
 	<br><br>
-	<button type='button' onclick="WinCheck()"> 
+	<button type='button' onclick="CheckWinnings()"> 
 		Check Payout
 	</button>
 </form>
 </center>
 
 <script>
-function WinCheck(){
-	alert("whee");
+function CheckWinnings(){
+	alert("hello");
 	var FiveNums = document.getElementById("nums").split();
 	var LuckyVal = document.getElementById("lucky").split();
 	alert(FiveNums[0]);
