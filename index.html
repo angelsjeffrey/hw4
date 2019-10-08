@@ -31,20 +31,18 @@ for (var i = 0; i < 5; i++) {
 <script>
 document.write("\n Lucky Ball: \n", LuckyBall, "\n");
 </script>
-<br>
 
 
 <form inputnums>
-Enter 5 numbers between 1 and 48: 
-<br>
-<input type="text" id="nums" value="00 00 00 00 00">
-<br>
-Choose a number for your Lucky Ball from 1 to 18: 
-<br>
-<input type="text" id="lucky" value="00">
-<br><br>
-<button onclick="WinCheck()"> 
-</button>
+	Enter 5 numbers between 1 and 48: <br>
+	<input type="text" name="nums" id="nums" value="00 00 00 00 00">
+	<br>
+	Choose a number for your Lucky Ball from 1 to 18: <br>
+	<input type="text" name="lucky" id="lucky" value="00">
+	<br><br>
+	<button onclick="WinCheck()"> 
+		Check Payout
+	</button>
 </form>
 </center>
 
