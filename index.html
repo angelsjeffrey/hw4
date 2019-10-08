@@ -15,7 +15,7 @@ LuckyBall = Math.floor(Math.random()*18) + 1;
 document.write("\n Lucky Ball: \
 	meme", LuckyBall, "\n");
 
-WinningNums.sort();
+WinningNums.sort(function(a, b){return a-b});
 document.write("Winning numbers sorted: \n");
 for (var i = 0; i < 5; i++) {
 	document.write(WinningNums[i], ", ");
