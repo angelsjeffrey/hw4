@@ -4,29 +4,33 @@
 
 
 <script>
-document.write("Winning numbers:");
+document.write("Winning numbers: \n");
 var WinningNums = [];
 for (var i = 0; i < 5; i++) {
 	WinningNums[i] = Math.floor(Math.random()*48) + 1;
-	document.write(WinningNums[i], ", ")
+	document.write(WinningNums[i], ", ");
 }
 
-WinningNums[5] = Math.floor(Math.random()*18) + 1;
-document.write("Lucky Ball: \n", WinningNums[5]);
+LuckyBall = Math.floor(Math.random()*18) + 1;
+document.write("\n Lucky Ball: \n", LuckyBall, "\n");
 
-for (var i = 0; i < 5; i++) 
+WinningNums.sort();
+document.write("Winning numbers sorted: \n");
+for (var i = 0; i < 5; i++) {
+	WinningNums[i] = Math.floor(Math.random()*48) + 1;
+	document.write(WinningNums[i], ", ");
+}
+document.write("\n Lucky Ball: \n", LuckyBall, "\n");
 	
+
+
 
 function ViewWinnings() {
 	var FiveNums = document.getElementById("nums").split();
 	var LuckyVal = document.getElementById("lucky").split();
-	alert(FiveNums[0])
+	alert(FiveNums[0]);
 
 }	
-
-
-
-
 
 
 
