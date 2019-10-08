@@ -4,37 +4,35 @@
 
 
 <script>
-document.write("Winning numbers: \n");
+document.write("Winning numbers: ");
+alert("hello");
 var WinningNums = [];
 for (var i = 0; i < 5; i++) {
 	WinningNums[i] = Math.floor(Math.random()*48) + 1;
 	document.write(WinningNums[i], ", ");
 }
+</script>
+<br>
+<script>
 
 LuckyBall = Math.floor(Math.random()*18) + 1;
 document.write("\n Lucky Ball: \
 	meme", LuckyBall, "\n");
+</script>
+<br>
+<script>
 
 WinningNums.sort(function(a, b){return a-b});
 document.write("Winning numbers sorted: \n");
 for (var i = 0; i < 5; i++) {
 	document.write(WinningNums[i], ", ");
 }
-document.write("\n Lucky Ball: \n", LuckyBall, "\n");
-	
-
-
-
-function ViewWinnings() {
-	var FiveNums = document.getElementById("nums").split();
-	var LuckyVal = document.getElementById("lucky").split();
-	alert(FiveNums[0]);
-
-}	
-
-
-
 </script>
+<br>
+<script>
+document.write("\n Lucky Ball: \n", LuckyBall, "\n");
+</script>
+<br>
 
 
 <form inputnums>
@@ -46,8 +44,14 @@ Choose a number for your Lucky Ball from 1 to 18: <br>
 	See Results
 </button>
 
+<script>
+function ViewWinnings() {
+	var FiveNums = document.getElementById("nums").split();
+	var LuckyVal = document.getElementById("lucky").split();
+	alert(FiveNums[0]);
 
-
+}
+</script>
 
 
 
