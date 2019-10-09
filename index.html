@@ -26,7 +26,7 @@ document.write("Lucky Ball: ", LuckyBall);
 WinningNums.sort(function(a, b){return a-b});
 document.write("Winning numbers sorted: ");
 for (var i = 0; i < 5; i++) {
-	document.write(WinningNums[i], ", ");
+	document.write(WinningNums[i]);
 	if (i < 4) 
 		document.write(", ");
 }
@@ -59,13 +59,14 @@ document.write("Lucky Ball: ", LuckyBall);
 		if (LuckyVal == LuckyBall) {
 			Luck = true;
 		}
-
+		alert (WinningNums[2]);
 		var NumCorrect = 0;
 		for (var i = 0; i < 5; i++) {
 			if (WinningNums.includes(ChosenNums[i])) {
 				NumCorrect++;
 			}
 		}
+		alert(NumCorrect);
 
 		if (NumCorrect == 5 && Luck) {
 			alert ("Payout: $7000 a WEEK for LIFE!");
