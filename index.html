@@ -7,7 +7,9 @@ document.write("Winning numbers: ");
 var WinningNums = [];
 for (var i = 0; i < 5; i++) {
 	WinningNums[i] = Math.floor(Math.random()*48) + 1;
-	document.write(WinningNums[i], ", ");
+	document.write(WinningNums[i]);
+	if (i < 4) 
+		document.write(", ");
 }
 
 </script>
@@ -15,25 +17,25 @@ for (var i = 0; i < 5; i++) {
 <script>
 
 LuckyBall = Math.floor(Math.random()*18) + 1;
-document.write("\n Lucky Ball: ", LuckyBall, "\n");
+document.write("Lucky Ball: ", LuckyBall);
 
 </script>
 <br>
 <script>
 
 WinningNums.sort(function(a, b){return a-b});
-document.write("Winning numbers sorted: \n");
+document.write("Winning numbers sorted: ");
 for (var i = 0; i < 5; i++) {
 	document.write(WinningNums[i], ", ");
+	if (i < 4) 
+		document.write(", ");
 }
-alert("working1");
 
 </script>
 <br>
 <script>
 
-document.write(" Lucky Ball: \n", LuckyBall, "\n");
-alert("working2");
+document.write("Lucky Ball: ", LuckyBall);
 </script>
 
 
@@ -50,8 +52,9 @@ alert("working2");
 <script language="javascript" type="text/javascript">
 	function CheckWinnings()
 	{
-		var FiveNums = document.getElementById("nums").split();
-		var LuckyVal = document.getElementById("lucky");
+		var FiveNums = document.getElementById("nums").value;
+		var ChosenNums = FiveNums.split(" ");
+		var LuckyVal = document.getElementById("lucky").value;
 		var Luck = false;
 		if (LuckyVal == LuckyBall) {
 			Luck = true;
@@ -59,7 +62,7 @@ alert("working2");
 
 		var NumCorrect = 0;
 		for (var i = 0; i < 5; i++) {
-			if (WinningNums.includes(FiveNums[i])) {
+			if (WinningNums.includes(ChosenNums[i])) {
 				NumCorrect++;
 			}
 		}
