@@ -62,6 +62,8 @@ document.write("Lucky Ball: ", LuckyBall);
 		alert (WinningNums[2]);
 		var NumCorrect = 0;
 		for (var i = 0; i < 5; i++) {
+			alert(ChosenNums[i]);
+			alert("winning is" + WinningNums[i]);
 			if (WinningNums.includes(ChosenNums[i])) {
 				NumCorrect++;
 			}
