@@ -1,60 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-	
-<script>
-function CheckWinnings(){
-	alert("hello");
-	var FiveNums = document.getElementById("nums").split();
-	var LuckyVal = document.getElementById("lucky").split();
-	alert(FiveNums[0]);
-	var Luck = false;
-	if (LuckyVal == LuckyBall){
-		Luck = true;
-	}
-
-	var NumCorrect = 0;
-	for (var i = 0; i < 5; i++) {
-		if (WinningNums.includes(FiveNums[i])) {
-			NumCorrect++;
-		}
-	}
-
-	if (NumCorrect == 5 and Luck) {
-		alert ("Payout: $7000 a WEEK for LIFE!");
-	}
-	else if (NumCorrect == 5) {
-		alert ("Payout: $25,000 a YEAR for LIFE!");
-	}
-	else if (NumCorrect == 4 and Luck) {
-		alert ("Payout: $5000");
-	}
-	else if (NumCorrect == 4) {
-		alert ("Payout: $200");
-	}
-	else if (NumCorrect == 3 and Luck) {
-		alert ("Payout: $150");
-	}
-	else if (NumCorrect == 3) {
-		alert ("Payout: $20");
-	}
-	else if (NumCorrect == 2 and Luck) {
-		alert ("Payout: $25");
-	}
-	else if (NumCorrect == 2) {
-		alert ("Payout: $3");
-	}
-	else if (NumCorrect == 1 and Luck) {
-		alert ("Payout: $6");
-	}
-	else if (Luck) {
-		alert ("Payout: $4");
-	}
-	else {
-		alert ("No Payout");
-	}
-}
-</script>
 
 <script>
 document.write("Winning numbers: ");
@@ -63,12 +9,14 @@ for (var i = 0; i < 5; i++) {
 	WinningNums[i] = Math.floor(Math.random()*48) + 1;
 	document.write(WinningNums[i], ", ");
 }
+
 </script>
 <br>
 <script>
 
 LuckyBall = Math.floor(Math.random()*18) + 1;
 document.write("\n Lucky Ball: ", LuckyBall, "\n");
+
 </script>
 <br>
 <script>
@@ -83,7 +31,8 @@ alert("working1");
 </script>
 <br>
 <script>
-document.write("\n Lucky Ball: \n", LuckyBall, "\n");
+
+document.write(" Lucky Ball: \n", LuckyBall, "\n");
 alert("working2");
 </script>
 
@@ -95,11 +44,62 @@ alert("working2");
 	Choose a number for your Lucky Ball from 1 to 18: <br>
 	<input type="text" name="lucky" id="lucky" value="00">
 	<br><br>
+	<input type= 'button' onclick="CheckWinnings()" value="Check Payout"> 
 </form>
-<button type= 'button' onclick="CheckWinnings()"> 
-	Check Payout!
-</button>
 
+<script language="javascript" type="text/javascript">
+	function CheckWinnings()
+	{
+		alert("hello");
+		var FiveNums = document.getElementById("nums").split();
+		var LuckyVal = document.getElementById("lucky");
+		var Luck = false;
+		if (LuckyVal == LuckyBall) {
+			Luck = true;
+		}
+
+		var NumCorrect = 0;
+		for (var i = 0; i < 5; i++) {
+			if (WinningNums.includes(FiveNums[i])) {
+				NumCorrect++;
+			}
+		}
+
+		if (NumCorrect == 5 && Luck) {
+			alert ("Payout: $7000 a WEEK for LIFE!");
+		}
+		else if (NumCorrect == 5) {
+			alert ("Payout: $25,000 a YEAR for LIFE!");
+		}
+		else if (NumCorrect == 4 && Luck) {
+			alert ("Payout: $5000");
+		}
+		else if (NumCorrect == 4) {
+			alert ("Payout: $200");
+		}
+		else if (NumCorrect == 3 && Luck) {
+			alert ("Payout: $150");
+		}
+		else if (NumCorrect == 3) {
+			alert ("Payout: $20");
+		}
+		else if (NumCorrect == 2 && Luck) {
+			alert ("Payout: $25");
+		}
+		else if (NumCorrect == 2) {
+			alert ("Payout: $3");
+		}
+		else if (NumCorrect == 1 && Luck) {
+			alert ("Payout: $6");
+		}
+		else if (Luck) {
+			alert ("Payout: $4");
+		}
+		else {
+			alert ("No Payout");
+		}
+	}
+</script>
 
 </body>
 </html>
